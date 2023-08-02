@@ -6,7 +6,7 @@ const Layout = styled.div`
     padding: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(auto-fill, 180px);
     grid-auto-rows: 10px;
     justify-content: center;
     background-color: black;
