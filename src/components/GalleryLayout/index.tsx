@@ -42,31 +42,34 @@ const Image = styled.img`
     object-fit: cover;
 `
 interface GalleryLayoutType {
-    children?: any;
+    data: string [];
 }
 
-const GalleryLayout: FC<GalleryLayoutType> = ({children}) =>{
+const GalleryLayout: FC<GalleryLayoutType> = ({data}) =>{
 
     return (
         <Layout>
-            <CardBig>
-                <Image src='/places/1.jpg' alt = 'places' />
-            </CardBig>
-            <CardMedium>
-                <Image src='/places/2.jpg' alt = 'places' />
-            </CardMedium>
-            <CardSmall>
-                <Image src='/places/3.jpg' alt = 'places' />
-            </CardSmall>
-            <CardBig>
-                <Image src='/places/4.jpg' alt = 'places' />
-            </CardBig>
-            <CardMedium>
-                <Image src='/places/5.jpg' alt = 'places' />
-            </CardMedium>
-            <CardSmall>
-                <Image src='/places/6.jpg' alt = 'places' />
-            </CardSmall>
+
+            {data.map((image, index)=>{
+                if((index + 1) % 2 ===0) {
+                    return (
+                        <CardBig key = {image}>
+                            <Image src={image} alt = 'places' />
+                        </CardBig>
+                    )
+                } else if((index + 1) % 3 ===0) {
+                    return (
+                        <CardMedium key = {image}>
+                            <Image src={image} alt = 'places' />
+                        </CardMedium>
+                    )
+                }
+                return (
+                    <CardSmall key = {image}>
+                        <Image src={image} alt = 'places' />
+                    </CardSmall>
+                )
+            })}
         </Layout>
     )
 }

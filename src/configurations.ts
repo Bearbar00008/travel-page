@@ -70,3 +70,12 @@ export const stories = [
         message: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard dummy text ever since the 1500s.",
     }
 ]
+
+export const explores = [
+    "/places/1.jpg",
+    "/places/2.jpg",
+    "/places/3.jpg",
+    "/places/4.jpg",
+    "/places/5.jpg",
+    "/places/6.jpg",
+]

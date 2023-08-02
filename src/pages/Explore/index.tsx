@@ -2,6 +2,7 @@ import { FC } from "react"
 import styled from "styled-components"
 
 import { GalleryLayout } from "../../components"
+import { explores } from "../../configurations"
 
 const ExploreWrapper = styled.main`
     padding: 0% 20% 10% 10%;
@@ -56,7 +57,7 @@ const Explore: FC = () =>{
             <SubTitle>
                 Places to visits
             </SubTitle>
-            <GalleryLayout />
+            <GalleryLayout data={explores} />
         </ExploreWrapper>
     )
 }
