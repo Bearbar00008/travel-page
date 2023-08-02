@@ -10,6 +10,9 @@ const Layout = styled.div`
     grid-auto-rows: 10px;
     justify-content: center;
     background-color: black;
+    @media only screen and (max-width: 1178px) {
+        grid-template-columns: repeat(auto-fill, 300px);
+    } 
 `
 
 const CardBig = styled.div`
@@ -49,7 +52,6 @@ const GalleryLayout: FC<GalleryLayoutType> = ({data}) =>{
 
     return (
         <Layout>
-
             {data.map((image, index)=>{
                 if((index + 1) % 2 ===0) {
                     return (
